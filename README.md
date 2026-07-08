@@ -55,7 +55,7 @@ To run the app locally:
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
-
+```
 ## Current MVP Features
 
 - Business problem input form
