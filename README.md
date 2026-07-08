@@ -45,6 +45,37 @@ And generate a structured AI/cloud solution brief.
 - Later: LLM API integration
 - Later: Docker and deployment
 
+
+## How to Run the App
+
+This project currently uses Streamlit for the first MVP interface.
+
+To run the app locally:
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+
+## Current MVP Features
+
+- Business problem input form
+- Industry selection
+- Cloud preference selection
+- Data source selection
+- Security and budget inputs
+- Template-based AI/cloud solution brief generation
+- Basic cloud service suggestions for AWS, GCP, and Azure
+
+## Current Limitations
+
+- No real LLM integration yet
+- No real RAG implementation yet
+- No document upload yet
+- No cloud deployment yet
+- No user authentication yet
+- No database yet
+
+
 ## Current status
 
 Day 1: Project initialized.
