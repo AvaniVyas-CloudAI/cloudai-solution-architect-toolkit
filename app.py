@@ -101,7 +101,16 @@ if st.button("Generate Solution Brief"):
     st.write(
         "A suitable first AI use case is an assistant that can help users find answers from trusted business knowledge sources."
     )
+    st.subheader("Knowledge Sources")
 
+    if data_sources:
+        st.write("The solution can use the following available data sources:")
+        for source in data_sources:
+            st.write(f"- {source}")
+    else:
+        st.write(
+            "No data sources were selected. A real AI solution would need trusted documents, knowledge bases, or business data before it can generate reliable answers."
+        )
     st.subheader("Suggested Architecture Approach")
     st.write(
         "The first version should use a simple input interface, a document knowledge layer, an AI model for response generation, and basic monitoring."
