@@ -111,6 +111,14 @@ if st.button("Generate Solution Brief"):
         st.write(
             "No data sources were selected. A real AI solution would need trusted documents, knowledge bases, or business data before it can generate reliable answers."
         )
+            st.subheader("Desired Business Outcome")
+
+    if desired_outcome:
+        st.write(desired_outcome)
+    else:
+        st.write(
+            "No desired outcome was provided. A strong AI/cloud solution should clearly define what business result it is trying to improve."
+        )
     st.subheader("Suggested Architecture Approach")
     st.write(
         "The first version should use a simple input interface, a document knowledge layer, an AI model for response generation, and basic monitoring."
@@ -171,3 +179,10 @@ if st.button("Generate Solution Brief"):
     st.write(
         "Start with a small prototype using a limited set of trusted documents. Improve retrieval quality, security, and monitoring before expanding to more users."
     )
+        st.subheader("Suggested First Steps")
+
+    st.write("- Confirm the business problem and expected outcome")
+    st.write("- Identify trusted data sources that can be used safely")
+    st.write("- Build a small prototype with limited users")
+    st.write("- Review output quality before expanding access")
+    st.write("- Add monitoring, feedback, and cost controls")
