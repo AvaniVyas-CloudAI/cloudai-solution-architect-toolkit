@@ -123,7 +123,11 @@ if st.button("Generate Solution Brief"):
     st.write(
         "The first version should use a simple input interface, a document knowledge layer, an AI model for response generation, and basic monitoring."
     )
+    st.subheader("Architecture Flow")
 
+    st.write(
+        "User Input → Business Problem Analysis → Knowledge Sources → AI/Cloud Solution Brief → Review and Improvement"
+    )
     st.subheader("Cloud Services to Consider")
 
     if cloud_preference == "AWS":
