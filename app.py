@@ -89,6 +89,11 @@ desired_outcome = st.text_area(
 st.divider()
 
 if st.button("Generate Solution Brief"):
+    if not business_problem.strip():
+
+        st.warning("Please describe the business problem before generating the solution brief.")
+
+        st.stop()
     st.header("Generated AI/Cloud Solution Brief")
 
     st.subheader("Problem Summary")
@@ -111,7 +116,7 @@ if st.button("Generate Solution Brief"):
         st.write(
             "No data sources were selected. A real AI solution would need trusted documents, knowledge bases, or business data before it can generate reliable answers."
         )
-            st.subheader("Desired Business Outcome")
+    st.subheader("Desired Business Outcome")
 
     if desired_outcome:
         st.write(desired_outcome)
@@ -183,7 +188,7 @@ if st.button("Generate Solution Brief"):
     st.write(
         "Start with a small prototype using a limited set of trusted documents. Improve retrieval quality, security, and monitoring before expanding to more users."
     )
-        st.subheader("Suggested First Steps")
+    st.subheader("Suggested First Steps")
 
     st.write("- Confirm the business problem and expected outcome")
     st.write("- Identify trusted data sources that can be used safely")
