@@ -78,4 +78,13 @@ streamlit run app.py
 
 ## Current status
 
-Day 1: Project initialized.
+Phase 1 MVP foundation is complete.
+
+The app currently:
+- Runs locally with Streamlit
+- Accepts business and cloud input details
+- Generates a structured AI/cloud solution brief
+- Includes basic validation
+- Suggests architecture, cloud services, security, cost, observability, and implementation sections
+
+Next focus: Phase 2 — improving the quality of recommendations and making the generated brief smarter.
