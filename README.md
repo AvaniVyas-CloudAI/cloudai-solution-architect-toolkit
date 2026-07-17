@@ -78,7 +78,8 @@ streamlit run app.py
 
 ## Current status
 
-Phase 1 MVP foundation is complete.
+Phase 1 MVP foundation is complete.  
+Phase 2 smarter recommendation logic is complete.
 
 The app currently:
 - Runs locally with Streamlit
@@ -86,5 +87,8 @@ The app currently:
 - Generates a structured AI/cloud solution brief
 - Includes basic validation
 - Suggests architecture, cloud services, security, cost, observability, and implementation sections
+- Provides smarter recommendations based on security level, budget sensitivity, and expected users
+- Includes risk level, missing information, and success metrics sections
+- Uses visual dividers to make the generated brief easier to read
 
-Next focus: Phase 2 — improving the quality of recommendations and making the generated brief smarter.
+Next focus: Phase 3 — adding sample use cases for different industries and business scenarios.
