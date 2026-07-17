@@ -160,13 +160,13 @@ if st.button("Generate Solution Brief"):
 
     st.write(f"Selected security level: {security_level}")
 
-    if security_level == "Basic":
+    if security_level == "Low":
         st.write("- Use approved data sources only")
         st.write("- Restrict access to the application")
         st.write("- Avoid storing sensitive customer or internal data in the first version")
         st.write("- Review generated answers before using them in production")
 
-    elif security_level == "Moderate":
+    elif security_level == "Medium":
         st.write("- Use role-based access control for different user types")
         st.write("- Store documents in a secure cloud storage location")
         st.write("- Encrypt data where possible")
