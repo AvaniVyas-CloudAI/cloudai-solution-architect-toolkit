@@ -211,6 +211,27 @@ if st.button("Generate Solution Brief"):
     st.write("- Monitor response time")
     st.write("- Collect user feedback")
     st.write("- Review logs regularly")
+    st.subheader("User Scale Recommendation")
+
+    st.write(f"Expected users: {expected_users}")
+
+    if expected_users <= 100:
+        st.write("- Start with a simple MVP setup")
+        st.write("- A lightweight Streamlit app is enough for early testing")
+        st.write("- Use basic logging and manual review")
+        st.write("- Avoid complex infrastructure until the use case is validated")
+
+    elif expected_users <= 1000:
+        st.write("- Plan for a more structured backend as usage grows")
+        st.write("- Add authentication and role-based access")
+        st.write("- Use centralized logging and basic monitoring")
+        st.write("- Prepare the app for deployment on a managed cloud service")
+
+    else:
+        st.write("- Design for scalability from the beginning")
+        st.write("- Use a dedicated backend service instead of only a local app")
+        st.write("- Add rate limits, monitoring, error tracking, and access control")
+        st.write("- Plan for cloud deployment, performance testing, and cost tracking")
 
     st.subheader("Implementation Approach")
     st.write(
