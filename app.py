@@ -157,15 +157,29 @@ if st.button("Generate Solution Brief"):
         st.write("- Logging and monitoring service")
 
     st.subheader("Security Considerations")
-    if security_level == "High":
-        st.write("- Use strict role-based access control")
-        st.write("- Avoid exposing sensitive data to the model")
-        st.write("- Add human review for risky or customer-facing answers")
-        st.write("- Log only necessary information")
+
+    st.write(f"Selected security level: {security_level}")
+
+    if security_level == "Basic":
+        st.write("- Use approved data sources only")
+        st.write("- Restrict access to the application")
+        st.write("- Avoid storing sensitive customer or internal data in the first version")
+        st.write("- Review generated answers before using them in production")
+
+    elif security_level == "Moderate":
+        st.write("- Use role-based access control for different user types")
+        st.write("- Store documents in a secure cloud storage location")
+        st.write("- Encrypt data where possible")
+        st.write("- Log important user actions and application errors")
+        st.write("- Add review steps for unclear or sensitive answers")
+
     else:
-        st.write("- Use approved data sources")
-        st.write("- Control access to internal documents")
-        st.write("- Review uncertain answers before production use")
+        st.write("- Use strict identity and access management controls")
+        st.write("- Encrypt data at rest and in transit")
+        st.write("- Avoid exposing sensitive data directly to the model")
+        st.write("- Add audit logging for user activity and generated outputs")
+        st.write("- Add human review for risky, sensitive, or customer-facing answers")
+        st.write("- Consider compliance needs before production use")
 
     st.subheader("Cost Considerations")
     if budget_sensitivity == "High":
