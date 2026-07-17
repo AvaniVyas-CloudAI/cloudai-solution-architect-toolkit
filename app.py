@@ -254,7 +254,14 @@ if st.button("Generate Solution Brief"):
             "This solution is suitable for early MVP testing with limited users and low-sensitive data. "
             "Start small, test the output quality, and improve controls as the solution grows."
         )
+    st.subheader("Missing Information / Questions to Clarify")
 
+    st.write("- What exact documents will be used as trusted knowledge sources?")
+    st.write("- Who will be allowed to access the tool?")
+    st.write("- Does the data include sensitive customer or internal information?")
+    st.write("- What response time is acceptable for users?")
+    st.write("- How will success be measured?")
+    st.write("- Who will review or approve the generated answers before wider use?")
     st.subheader("Implementation Approach")
     st.write(
         "Start with a small prototype using a limited set of trusted documents. Improve retrieval quality, security, and monitoring before expanding to more users."
