@@ -95,17 +95,21 @@ if st.button("Generate Solution Brief"):
 
         st.stop()
     st.header("Generated AI/Cloud Solution Brief")
+    st.divider()
 
     st.subheader("Problem Summary")
     st.write(
         f"The organization operates in the {industry} industry and is facing the following problem:"
     )
     st.write(business_problem)
+    st.divider()
 
     st.subheader("Recommended AI Use Case")
     st.write(
         "A suitable first AI use case is an assistant that can help users find answers from trusted business knowledge sources."
     )
+    st.divider()
+
     st.subheader("Knowledge Sources")
 
     if data_sources:
@@ -116,6 +120,9 @@ if st.button("Generate Solution Brief"):
         st.write(
             "No data sources were selected. A real AI solution would need trusted documents, knowledge bases, or business data before it can generate reliable answers."
         )
+
+    st.divider()
+
     st.subheader("Desired Business Outcome")
 
     if desired_outcome:
@@ -124,15 +131,24 @@ if st.button("Generate Solution Brief"):
         st.write(
             "No desired outcome was provided. A strong AI/cloud solution should clearly define what business result it is trying to improve."
         )
+
+    st.divider()
+
     st.subheader("Suggested Architecture Approach")
     st.write(
         "The first version should use a simple input interface, a document knowledge layer, an AI model for response generation, and basic monitoring."
     )
+
+    st.divider()
+
     st.subheader("Architecture Flow")
 
     st.write(
         "User Input → Business Problem Analysis → Knowledge Sources → AI/Cloud Solution Brief → Review and Improvement"
     )
+
+    st.divider()
+
     st.subheader("Cloud Services to Consider")
 
     if cloud_preference == "AWS":
