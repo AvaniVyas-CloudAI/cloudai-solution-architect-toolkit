@@ -232,6 +232,28 @@ if st.button("Generate Solution Brief"):
         st.write("- Use a dedicated backend service instead of only a local app")
         st.write("- Add rate limits, monitoring, error tracking, and access control")
         st.write("- Plan for cloud deployment, performance testing, and cost tracking")
+    st.subheader("Risk Level")
+
+    if security_level == "High" or expected_users > 1000:
+        st.write("Estimated risk level: High")
+        st.write(
+            "This solution may involve sensitive data, high usage, or customer-facing impact. "
+            "It should include strong access control, audit logging, human review, and careful testing before production use."
+        )
+
+    elif security_level == "Medium" or expected_users > 100:
+        st.write("Estimated risk level: Medium")
+        st.write(
+            "This solution has moderate risk because it may involve internal documents, multiple users, or operational decisions. "
+            "It should include role-based access, monitoring, and review steps before wider rollout."
+        )
+
+    else:
+        st.write("Estimated risk level: Low")
+        st.write(
+            "This solution is suitable for early MVP testing with limited users and low-sensitive data. "
+            "Start small, test the output quality, and improve controls as the solution grows."
+        )
 
     st.subheader("Implementation Approach")
     st.write(
