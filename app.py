@@ -262,6 +262,15 @@ if st.button("Generate Solution Brief"):
     st.write("- What response time is acceptable for users?")
     st.write("- How will success be measured?")
     st.write("- Who will review or approve the generated answers before wider use?")
+    st.subheader("Success Metrics")
+
+    st.write("- Reduction in repeated manual support or operations work")
+    st.write("- Faster response time for users asking common questions")
+    st.write("- Improved accuracy of answers based on trusted knowledge sources")
+    st.write("- Lower time spent searching across documents or tickets")
+    st.write("- User satisfaction with generated recommendations")
+    st.write("- Number of answers reviewed, corrected, or escalated")
+
     st.subheader("Implementation Approach")
     st.write(
         "Start with a small prototype using a limited set of trusted documents. Improve retrieval quality, security, and monitoring before expanding to more users."
