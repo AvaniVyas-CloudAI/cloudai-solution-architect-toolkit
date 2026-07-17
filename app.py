@@ -182,15 +182,29 @@ if st.button("Generate Solution Brief"):
         st.write("- Consider compliance needs before production use")
 
     st.subheader("Cost Considerations")
+
+    st.write(f"Selected budget sensitivity: {budget_sensitivity}")
+
     if budget_sensitivity == "High":
-        st.write("- Start with a small document set")
-        st.write("- Limit model usage during early testing")
-        st.write("- Use cost alerts")
+        st.write("- Start with a small prototype before scaling")
+        st.write("- Keep model/API usage limited during early testing")
+        st.write("- Use cost alerts and usage limits")
+        st.write("- Reuse existing documents and cloud resources where possible")
         st.write("- Avoid over-engineering the first version")
+
+    elif budget_sensitivity == "Medium":
+        st.write("- Balance cost control with reliability")
+        st.write("- Use managed cloud services where they reduce maintenance effort")
+        st.write("- Track storage, hosting, and model/API usage")
+        st.write("- Review costs before increasing users or document volume")
+        st.write("- Scale gradually after the MVP proves value")
+
     else:
-        st.write("- Monitor model usage")
-        st.write("- Track hosting and storage costs")
-        st.write("- Review costs before scaling to more users")
+        st.write("- Prioritize performance, reliability, and scalability")
+        st.write("- Plan for stronger infrastructure and monitoring")
+        st.write("- Use higher-capacity services if response speed is important")
+        st.write("- Track cost trends even if performance is the main priority")
+        st.write("- Review architecture regularly as usage grows")
 
     st.subheader("Observability Considerations")
     st.write("- Track failed or low-quality answers")
